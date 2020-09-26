@@ -34,7 +34,7 @@ public class App {
                 };
         System.out.println("Before: ");
         print2dArr(sudokuBoard);
-        System.out.println("Is board solvable? " + sudokuSolver.solveSudoku(sudokuBoard) + "\n");
+        System.out.println("\nIs board solvable? " + sudokuSolver.solveSudoku(sudokuBoard) + ":");
         print2dArr(sudokuBoard);
     }
 
