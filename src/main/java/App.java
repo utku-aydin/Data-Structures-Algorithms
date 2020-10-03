@@ -1,7 +1,4 @@
-import algorithms.BinarySearch;
-import algorithms.Fibonacci;
-import algorithms.GridPaths;
-import algorithms.SudokuSolver;
+import algorithms.*;
 
 public class App {
 
@@ -20,7 +17,7 @@ public class App {
         System.out.println(paths.pathCount(grid));*/
 
         SudokuSolver sudokuSolver = new SudokuSolver();
-        int[][] sudokuBoard =
+        int[][] sudokuBoard1 =
                 {
                         {1, 0, 2, 0, 9, 0, 0, 0, 0},
                         {5, 0, 0, 0, 0, 7, 3, 1, 8},
@@ -32,10 +29,15 @@ public class App {
                         {0, 0, 1, 0, 7, 8, 5, 0, 0},
                         {9, 0, 0, 0, 0, 0, 8, 0, 7}
                 };
+
+        SudokuMaker sudokuMaker = new SudokuMaker();
+        int[][] sudokuBoard2 = sudokuMaker.makeBoard(123456789);
+        System.out.println("\nDoes the board have 1 solution? " + sudokuSolver.oneSolution(sudokuBoard2) + ":");
+
         System.out.println("Before: ");
-        print2dArr(sudokuBoard);
-        System.out.println("\nIs board solvable? " + sudokuSolver.solveSudoku(sudokuBoard) + ":");
-        print2dArr(sudokuBoard);
+        print2dArr(sudokuBoard2);
+        System.out.println("\nIs board solvable? " + sudokuSolver.solveSudoku(sudokuBoard2) + ":");
+        print2dArr(sudokuBoard2);
     }
 
     public static void print2dArr(int[][] toPrint) {

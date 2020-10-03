@@ -8,6 +8,40 @@ public class SudokuSolver {
         return solve(board, 0, 0);
     }
 
+    public boolean oneSolution(int[][] board) {
+        int solCount = countSolutions(board, 0, 0);
+        System.out.println("Number of solutions: " + solCount);
+        return solCount == 1;
+    }
+
+    private int countSolutions(int[][] board, int row, int column) {
+        if (column == board.length) {
+            if (row == board.length - 1) {
+                //print2dArr(board);
+                return 1;
+            }
+            return countSolutions(board, row + 1, 0);
+        }
+
+        int total = 0;
+
+        if (board[row][column] == 0) {
+            for (int i = 1; i < 10; i++) {
+                board[row][column] = i;
+                if (validateRow(board[row]) && validateColumn(getColumn(board, column)) && validateSquare(board, row, column)) {
+                    total += countSolutions(board, row, column + 1);
+                    System.out.println("Total: " + total);
+                    if (total > 1)
+                        return 2;
+                }
+            }
+            board[row][column] = 0;
+            return total;
+        } else {
+            return countSolutions(board, row, column + 1);
+        }
+    }
+
     private boolean solve(int[][] board, int row, int column) {
         if (column == board.length) {
             if (row == board.length - 1) {
