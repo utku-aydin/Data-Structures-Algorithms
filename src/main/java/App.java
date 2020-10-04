@@ -16,7 +16,7 @@ public class App {
         int[][] grid = {{0, 0, 0}, {0, 0, 0}, {0, 1, 0}};
         System.out.println(paths.pathCount(grid));*/
 
-        SudokuSolver sudokuSolver = new SudokuSolver();
+/*        SudokuSolver sudokuSolver = new SudokuSolver();
         int[][] sudokuBoard1 =
                 {
                         {1, 0, 2, 0, 9, 0, 0, 0, 0},
@@ -37,7 +37,12 @@ public class App {
         System.out.println("Before: ");
         print2dArr(sudokuBoard2);
         System.out.println("\nIs board solvable? " + sudokuSolver.solveSudoku(sudokuBoard2) + ":");
-        print2dArr(sudokuBoard2);
+        print2dArr(sudokuBoard2);*/
+
+        NQueens nQueens = new NQueens();
+        int[][] queenBoard = nQueens.solveQueens(4);
+        System.out.println("At end:");
+        print2dArr(queenBoard);
     }
 
     public static void print2dArr(int[][] toPrint) {
