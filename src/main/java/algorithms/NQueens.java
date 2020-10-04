@@ -3,7 +3,10 @@ package algorithms;
 /* Backtracking: method of problem solving by making
  * a series of choices that can be return (backtrack) to.
  * The Call Stack is remembers each function call,
- * and the decision made at each one.*/
+ * and the decision made at each one.
+ * No need for queens to fill squares on their own row or on rows above them,
+ * as later queens will only be placed below them.
+ * However, I've kept this for the visual aspect.*/
 public class NQueens {
 
     public int[][] solveQueens(int n) {

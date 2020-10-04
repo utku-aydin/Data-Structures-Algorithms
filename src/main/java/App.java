@@ -39,10 +39,13 @@ public class App {
         System.out.println("\nIs board solvable? " + sudokuSolver.solveSudoku(sudokuBoard2) + ":");
         print2dArr(sudokuBoard2);*/
 
-        NQueens nQueens = new NQueens();
+/*        NQueens nQueens = new NQueens();
         int[][] queenBoard = nQueens.solveQueens(4);
         System.out.println("At end:");
-        print2dArr(queenBoard);
+        print2dArr(queenBoard);*/
+
+        TowersOfHanoi towersOfHanoi = new TowersOfHanoi();
+        towersOfHanoi.solveHanoi(4);
     }
 
     public static void print2dArr(int[][] toPrint) {
