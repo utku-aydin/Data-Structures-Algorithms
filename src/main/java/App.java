@@ -1,4 +1,5 @@
 import algorithms.*;
+import data_structures.Graph;
 
 public class App {
 
@@ -44,8 +45,29 @@ public class App {
         System.out.println("At end:");
         print2dArr(queenBoard);*/
 
-        TowersOfHanoi towersOfHanoi = new TowersOfHanoi();
-        towersOfHanoi.solveHanoi(4);
+/*        TowersOfHanoi towersOfHanoi = new TowersOfHanoi();
+        towersOfHanoi.solveHanoi(8);*/
+
+        Graph<String> graph = new Graph<>();
+        graph.addVertex("A");
+        graph.addVertex("B");
+        graph.addVertex("C");
+        graph.addVertex("D");
+        graph.addVertex("E");
+        graph.addVertex("F");
+        graph.addVertex("G");
+        graph.addVertex("H");
+
+        graph.addEdge(1, "B", "A");
+        graph.addEdge(1, "A", "C");
+        graph.addEdge(1, "A", "D");
+        graph.addEdge(1, "A", "E");
+        graph.addEdge(1, "E", "F");
+        graph.addEdge(1, "E", "G");
+        graph.addEdge(1, "E", "H");
+
+        BFS bfs = new BFS(graph);
+        bfs.breadthFirstSearch("B");
     }
 
     public static void print2dArr(int[][] toPrint) {
