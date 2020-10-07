@@ -63,11 +63,14 @@ public class App {
         graph.addEdge(1, "A", "D");
         graph.addEdge(1, "A", "E");
         graph.addEdge(1, "E", "F");
+        graph.addEdge(1, "E", "D");
         graph.addEdge(1, "E", "G");
         graph.addEdge(1, "E", "H");
 
         BFS bfs = new BFS(graph);
         bfs.breadthFirstSearch("B");
+/*        DFS dfs = new DFS(graph);
+        dfs.searchDF("B");*/
     }
 
     public static void print2dArr(int[][] toPrint) {
