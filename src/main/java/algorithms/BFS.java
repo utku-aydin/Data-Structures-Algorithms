@@ -43,12 +43,13 @@ public class BFS {
         do {
             current = searchQueue.poll();
             System.out.println("Current vertex: " + current);
-            seenSet.add(current);
+
             destinations = subject.getDestinations(current);
 
             for (String destination: destinations) {
                 if (!seenSet.contains(destination)) {
                     searchQueue.add(destination);
+                    seenSet.add(destination);
                 }
             }
 
