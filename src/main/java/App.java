@@ -48,7 +48,7 @@ public class App {
 /*        TowersOfHanoi towersOfHanoi = new TowersOfHanoi();
         towersOfHanoi.solveHanoi(8);*/
 
-        Graph<String> graph = new Graph<>();
+/*        Graph<String> graph = new Graph<>();
         graph.addVertex("A");
         graph.addVertex("B");
         graph.addVertex("C");
@@ -68,9 +68,12 @@ public class App {
         graph.addEdge(1, "E", "H");
 
         BFS bfs = new BFS(graph);
-        bfs.breadthFirstSearch("B");
+        bfs.breadthFirstSearch("B");*/
 /*        DFS dfs = new DFS(graph);
         dfs.searchDF("B");*/
+
+        LongestCommonSubsequence lcs = new LongestCommonSubsequence();
+        System.out.println(lcs.lcSubsequence("AGGTAB", "GXTXYAB "));
     }
 
     public static void print2dArr(int[][] toPrint) {
