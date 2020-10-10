@@ -1,6 +1,8 @@
 import algorithms.*;
 import data_structures.Graph;
 
+import java.util.PriorityQueue;
+
 public class App {
 
     public static void main(String[] args) {
@@ -72,8 +74,36 @@ public class App {
 /*        DFS dfs = new DFS(graph);
         dfs.searchDF("B");*/
 
-        LongestCommonSubsequence lcs = new LongestCommonSubsequence();
-        System.out.println(lcs.lcSubsequence("AGGTAB", "GXTXYAB "));
+/*        LongestCommonSubsequence lcs = new LongestCommonSubsequence();
+        System.out.println(lcs.lcSubsequence("AGGTAB", "GXTXYAB "));*/
+
+/*        int[] testArr = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        RangeQueryCache rqc = new RangeQueryCache(testArr);
+        int start = 5;
+        int end = 9;
+        System.out.printf("From %d to %d, sum is %d ", start, end, rqc.rqCache(start, end));*/
+
+/*        MaxSumRectangle msr = new MaxSumRectangle();
+        int[][] test = {
+                {1, 2, 3, 4},
+                {1, 2, 3, 4},
+                {-1, -2, -3, -4}
+        };
+        System.out.printf("Max sum is: %d", msr.maxSum(test));*/
+
+/*        PriorityQueue<Integer> pq = new PriorityQueue<Integer>((n1, n2) -> n1.compareTo(n2));
+        Integer one = 1;
+        Integer two = 2;
+        System.out.println("Comp: " + two.compareTo(one));
+        for (int i = 10; i >= 0; i--) {
+            pq.add(i);
+        }
+
+        System.out.printf("Poll: %d", pq.poll());*/
+
+        MaxSumArray msa = new MaxSumArray();
+        int[] arr = {-2, 2, 5, -11, 6, 2};
+        System.out.printf("Max sum: %d", msa.maxSum(arr));
     }
 
     public static void print2dArr(int[][] toPrint) {
