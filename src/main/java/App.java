@@ -1,5 +1,7 @@
 import algorithms.*;
 import data_structures.Graph;
+import threading.ThreadTtut;
+import threading.ThreadTutRunnable;
 
 import java.util.PriorityQueue;
 
@@ -100,10 +102,57 @@ public class App {
         }
 
         System.out.printf("Poll: %d", pq.poll());*/
-
+/*
         MaxSumArray msa = new MaxSumArray();
         int[] arr = {-2, 2, 5, -11, 6, 2};
-        System.out.printf("Max sum: %d", msa.maxSum(arr));
+        System.out.printf("Max sum: %d", msa.maxSum(arr));*/
+
+        Thread run1 = new Thread(new ThreadTutRunnable());
+        Thread run2 = new Thread(new ThreadTutRunnable());
+
+        run1.start();
+        run2.start();
+
+        Thread mAnon = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                for (int i = 0; i < 10; i++) {
+                    System.out.println(i);
+                    try {
+                        Thread.sleep(10);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+        mAnon.start();
+    }
+
+    public static int strStr(String haystack, String needle) {
+        if (needle.length() > haystack.length())
+            return -1;
+
+        if (needle.length() == 0)
+            return 0;
+
+        if (needle.equals(haystack))
+            return 0;
+
+        for (int i = 0; i <= haystack.length() - needle.length(); i++) {
+            int needLen = needle.length();
+            if (haystack.length() < needLen + i)
+                return -1;
+
+            if (haystack.substring(i, i + needLen).equals(needle)) {
+                System.out.println(i);
+                return i;
+            }
+
+        }
+
+
+        return -1;
     }
 
     public static void print2dArr(int[][] toPrint) {

@@ -37,4 +37,8 @@ public class MaxSumRectangle {
         return sum;
     }
 
+    private int elegantSolution() {
+        return 0;
+    }
+
 }
