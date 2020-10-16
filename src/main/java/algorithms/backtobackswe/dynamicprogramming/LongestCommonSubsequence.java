@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.backtobackswe.dynamicprogramming;
 
 public class LongestCommonSubsequence {
 

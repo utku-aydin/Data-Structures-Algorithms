@@ -1,5 +1,7 @@
 package algorithms;
 
+import algorithms.backtobackswe.dynamicprogramming.SudokuSolver;
+
 import java.util.Random;
 
 public class SudokuMaker {

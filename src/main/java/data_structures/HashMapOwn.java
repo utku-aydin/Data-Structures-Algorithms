@@ -1,4 +1,4 @@
 package data_structures;
 
-public class HashMap {
+public class HashMapOwn {
 }

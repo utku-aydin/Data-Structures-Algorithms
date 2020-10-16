@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 
 public class Graph<T> {
 
-    private HashMap<T, GraphNode<T>> vertexes = new HashMap<>();
+    private final HashMap<T, GraphNode<T>> vertexes = new HashMap<>();
 
     public boolean addVertex(T value) {
         GraphNode<T> added = new GraphNode<T>(value);
@@ -37,6 +37,14 @@ public class Graph<T> {
         destinations = edges.stream().map((e) -> e.getDestination().getValue()).collect(Collectors.toList());
 
         return destinations;
+    }
+
+    public List<Tuple<Integer, T>> getDestinationsWithWeights(T vertexValue) {
+        List<Tuple<Integer, T>> destinationsWithWeights;
+        HashSet<GraphEdge<T>> edges = vertexes.get(vertexValue).getEdges();
+        destinationsWithWeights = edges.stream().map((e) -> new Tuple<>(e.weight, e.getDestination().getValue())).collect(Collectors.toList());
+
+        return destinationsWithWeights;
     }
 
     private class GraphNode<t> {

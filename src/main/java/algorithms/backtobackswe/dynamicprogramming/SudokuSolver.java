@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.backtobackswe.dynamicprogramming;
 
 import java.util.HashMap;
 

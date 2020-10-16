@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.traversals;
 
 import data_structures.Graph;
 

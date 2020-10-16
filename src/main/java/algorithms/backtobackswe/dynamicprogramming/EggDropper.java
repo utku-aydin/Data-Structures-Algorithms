@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.backtobackswe.dynamicprogramming;
 
 /* Find the least amount of eggs (worst case) you'd need to
  * drop to undoubtedly ascertain the pivotal (egg cracking) floor.*/

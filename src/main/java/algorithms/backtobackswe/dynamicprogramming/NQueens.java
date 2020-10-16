@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.backtobackswe.dynamicprogramming;
 
 /* Backtracking: method of problem solving by making
  * a series of choices that can be return (backtrack) to.

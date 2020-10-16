@@ -1,9 +1,5 @@
-import algorithms.*;
+import algorithms.traversals.Dijkstra;
 import data_structures.Graph;
-import threading.ThreadTtut;
-import threading.ThreadTutRunnable;
-
-import java.util.PriorityQueue;
 
 public class App {
 
@@ -107,7 +103,7 @@ public class App {
         int[] arr = {-2, 2, 5, -11, 6, 2};
         System.out.printf("Max sum: %d", msa.maxSum(arr));*/
 
-        Thread run1 = new Thread(new ThreadTutRunnable());
+/*        Thread run1 = new Thread(new ThreadTutRunnable());
         Thread run2 = new Thread(new ThreadTutRunnable());
 
         run1.start();
@@ -126,7 +122,39 @@ public class App {
                 }
             }
         });
-        mAnon.start();
+        mAnon.start();*/
+/*
+        SortedSquaredArray sortSqArr = new SortedSquaredArray();
+        int[] testArr = {-10, -4, -1, 2, 3, 8, 11, 23};
+        System.out.println("Prior: " + Arrays.toString(testArr) + " Sorted: " + Arrays.toString(sortSqArr.sortedSquared(testArr)));*/
+/*
+        ParenthesisMatchedStrings parMatchStrings = new ParenthesisMatchedStrings();
+        parMatchStrings.parenthesisMatch(3);*/
+
+/*        CountDownsK countDownsK = new CountDownsK();
+        countDownsK.countDowns();*/
+
+        Graph<String> graph = new Graph<>();
+        graph.addVertex("A");
+        graph.addVertex("B");
+        graph.addVertex("C");
+        graph.addVertex("D");
+        graph.addVertex("E");
+        graph.addVertex("F");
+        graph.addVertex("G");
+        graph.addVertex("H");
+
+        graph.addEdge(1, "B", "A");
+        graph.addEdge(1, "A", "C");
+        graph.addEdge(1, "A", "D");
+        graph.addEdge(1, "A", "E");
+        graph.addEdge(1, "E", "F");
+        graph.addEdge(1, "E", "D");
+        graph.addEdge(1, "E", "G");
+        graph.addEdge(1, "E", "H");
+
+        Dijkstra dijkstra = new Dijkstra();
+        dijkstra.dijkstraSolution(graph, "A", "H ");
     }
 
     public static int strStr(String haystack, String needle) {
