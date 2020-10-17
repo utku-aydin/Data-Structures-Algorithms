@@ -1,3 +1,5 @@
+import algorithms.backtobackswe.dynamicprogramming.EggDropper;
+import algorithms.mit.introtoalgorithmicthinking.FindPeak;
 import algorithms.traversals.Dijkstra;
 import data_structures.Graph;
 
@@ -134,7 +136,7 @@ public class App {
 /*        CountDownsK countDownsK = new CountDownsK();
         countDownsK.countDowns();*/
 
-        Graph<String> graph = new Graph<>();
+/*        Graph<String> graph = new Graph<>();
         graph.addVertex("A");
         graph.addVertex("B");
         graph.addVertex("C");
@@ -154,7 +156,14 @@ public class App {
         graph.addEdge(1, "E", "H");
 
         Dijkstra dijkstra = new Dijkstra();
-        dijkstra.dijkstraSolution(graph, "A", "H ");
+        dijkstra.dijkstraSolution(graph, "A", "H ");*/
+/*
+        EggDropper eggDropper = new EggDropper();
+        eggDropper.SolveEggDrop(10, 100, 50);*/
+
+        int[] testArr = {1,2,3,4,5,4,3,2,1};
+        FindPeak findPeak = new FindPeak();
+        System.out.printf("Result: %d", findPeak.findPeak(testArr));
     }
 
     public static int strStr(String haystack, String needle) {
