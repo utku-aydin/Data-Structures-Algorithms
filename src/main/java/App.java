@@ -1,7 +1,13 @@
 import algorithms.backtobackswe.dynamicprogramming.EggDropper;
+import algorithms.backtobackswe.dynamicprogramming.UniqueBinaryTrees;
+import algorithms.interfaces.GeneralAlgorithm;
 import algorithms.mit.introtoalgorithmicthinking.FindPeak;
+import algorithms.mit.introtoalgorithmicthinking.FindPeak2D;
+import algorithms.mit.introtoalgorithmicthinking.InsertionSort;
+import algorithms.mit.introtoalgorithmicthinking.MergeSort;
 import algorithms.traversals.Dijkstra;
 import data_structures.Graph;
+import utilities.TimeUtil;
 
 public class App {
 
@@ -160,10 +166,14 @@ public class App {
 /*
         EggDropper eggDropper = new EggDropper();
         eggDropper.SolveEggDrop(10, 100, 50);*/
-
+/*
         int[] testArr = {1,2,3,4,5,4,3,2,1};
         FindPeak findPeak = new FindPeak();
-        System.out.printf("Result: %d", findPeak.findPeak(testArr));
+        System.out.printf("Result: %d", findPeak.findPeak(testArr));*/
+
+        GeneralAlgorithm generalAlgorithm = new UniqueBinaryTrees();
+        TimeUtil timeUtil = new TimeUtil();
+        timeUtil.runWithTimer(generalAlgorithm);
     }
 
     public static int strStr(String haystack, String needle) {

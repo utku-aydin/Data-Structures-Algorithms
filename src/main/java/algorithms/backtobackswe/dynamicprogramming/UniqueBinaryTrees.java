@@ -1,23 +1,50 @@
 package algorithms.backtobackswe.dynamicprogramming;
 
-public class UniqueBinaryTrees {
+import algorithms.interfaces.GeneralAlgorithm;
+import utilities.InputUtils;
+import utilities.OutputUtils;
 
-    public int uniqueCount(int[] nodes) {
-        int sum = 0;
-        for (int i = 0; i < nodes.length; i++) {
-            sum += recursiveSolution(i, nodes);
-        }
+public class UniqueBinaryTrees implements GeneralAlgorithm {
 
-        return sum;
+    Integer subject;
+
+    @Override
+    public void handleInputs() {
+        InputUtils inputUtils = new InputUtils();
+        subject = inputUtils.integerInputUtil();
     }
 
-    private int recursiveSolution(int index, int[] nodes) {
+    @Override
+    public void executeAlgorithm() {
+        int result = possibilitiesForSize((int) subject);
+        OutputUtils outputUtils = new OutputUtils();
+        outputUtils.printInt(result);
+    }
+
+    // For each root, there are (recursive) possibilities on the left,
+    // and identical/similar results on the right. Each result on the right
+    // is matched by all the results on the left, so we must multiply them.
+    private int splitSubTreePossibilities(int current, int length) {
+        return possibilitiesForSize(current - 1) * possibilitiesForSize(length - current);
+    }
+
+    // Called for each possible root. Each root results in a different outcome.
+    private int possibilitiesForSize(int size) {
+        if (size == 2)
+            return 2;
+
+        if (size == 1)
+            return 1;
+
+        if (size == 0)
+            return 1;
+
         int total = 0;
-        if (index != 0)
-            total += recursiveSolution(index - 1, nodes);
-        if (index < nodes.length)
-            total += recursiveSolution(index + 1, nodes);
-        return 1;
+        for (int i = 1; i <= size; i++) {
+            total += splitSubTreePossibilities(i, size);
+        }
+
+        return total;
     }
 
 }
