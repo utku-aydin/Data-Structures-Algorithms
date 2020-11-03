@@ -1,12 +1,13 @@
 import algorithms.backtobackswe.dynamicprogramming.EggDropper;
+import algorithms.backtobackswe.dynamicprogramming.MaxSumArray;
 import algorithms.backtobackswe.dynamicprogramming.UniqueBinaryTrees;
 import algorithms.interfaces.GeneralAlgorithm;
-import algorithms.mit.introtoalgorithmicthinking.FindPeak;
-import algorithms.mit.introtoalgorithmicthinking.FindPeak2D;
-import algorithms.mit.introtoalgorithmicthinking.InsertionSort;
-import algorithms.mit.introtoalgorithmicthinking.MergeSort;
+import algorithms.leetcode.AddBinary;
+import algorithms.mit.introtoalgorithmicthinking.*;
 import algorithms.traversals.Dijkstra;
 import data_structures.Graph;
+import utilities.InputUtils;
+import utilities.OutputUtils;
 import utilities.TimeUtil;
 
 public class App {
@@ -170,8 +171,15 @@ public class App {
         int[] testArr = {1,2,3,4,5,4,3,2,1};
         FindPeak findPeak = new FindPeak();
         System.out.printf("Result: %d", findPeak.findPeak(testArr));*/
+/*
+        MaxSumArray maxSumArray = new MaxSumArray();
+        OutputUtils outputUtils = new OutputUtils();
+        InputUtils inputUtils = new InputUtils();
 
-        GeneralAlgorithm generalAlgorithm = new UniqueBinaryTrees();
+        Integer[] temp = inputUtils.arrInputUtil();
+        int maxSum = maxSumArray.maxSum(temp);
+        System.out.printf("The max sum is: %d", maxSum);*/
+        GeneralAlgorithm generalAlgorithm = new AddBinary();
         TimeUtil timeUtil = new TimeUtil();
         timeUtil.runWithTimer(generalAlgorithm);
     }

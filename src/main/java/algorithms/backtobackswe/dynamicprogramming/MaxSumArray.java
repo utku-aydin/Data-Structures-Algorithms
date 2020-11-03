@@ -2,11 +2,11 @@ package algorithms.backtobackswe.dynamicprogramming;
 
 public class MaxSumArray {
 
-    public int maxSum(int[] arr) {
+    public int maxSum(Integer[] arr) {
         return kadaneSolution(arr);
     }
 
-    private int bruteForceSolution(int[] arr) {
+    private int bruteForceSolution(Integer[] arr) {
         int max = 0;
         for (int i = 0; i < arr.length; i++) {
             int rollingSum = 0;
@@ -19,7 +19,7 @@ public class MaxSumArray {
         return max;
     }
 
-    private int kadaneSolution(int[] arr) {
+    private int kadaneSolution(Integer[] arr) {
         int max = Integer.MIN_VALUE;
         int rolling = 0;
         for (int j : arr) {

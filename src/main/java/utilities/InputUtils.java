@@ -12,6 +12,12 @@ public class InputUtils {
         return s.nextInt();
     }
 
+    public String stringInputUtil() {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Input a string: ");
+        return s.nextLine();
+    }
+
     public Integer[] arrInputUtil() {
         List<Integer> input = new ArrayList<>();
         Scanner s = new Scanner(System.in);
