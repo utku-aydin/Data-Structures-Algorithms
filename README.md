@@ -1,2 +1,2 @@
-# DataStructuresAlgorithms
- Some data structures/algorithms practice
+# Data Structures & Algorithms
+ Some foundational data structures/algorithms.
